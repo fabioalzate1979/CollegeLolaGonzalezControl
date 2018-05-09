@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegeLolaGonzalezControl.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegeLolaGonzalezControl.Domain.Entities", "CollegeLolaGonzalezControl.DomainEntities\CollegeLolaGonzalezControl.Domain.Entities.csproj", "{E3407FCB-EE2E-4955-8702-909843CA93FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegeLolaGonzalezControl.Infraestructure", "CollegeLolaGonzalezControl.Infraestructure\CollegeLolaGonzalezControl.Infraestructure.csproj", "{EFAF2E4C-9528-401B-84D3-B2C3675778AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegeLolaGonzalezControl.Infraestructure.Data", "CollegeLolaGonzalezControl.Infraestructure\CollegeLolaGonzalezControl.Infraestructure.Data.csproj", "{EFAF2E4C-9528-401B-84D3-B2C3675778AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
