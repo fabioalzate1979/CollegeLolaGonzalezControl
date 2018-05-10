@@ -50,6 +50,11 @@
     <Compile Include="DBFactory\DatabaseFactory.cs" />
     <Compile Include="DBFactory\IDatabaseFactory.cs" />
     <Compile Include="EntityFramework\DBContext.cs" />
+    <Compile Include="Migrations\201805101631562_Qualification.cs" />
+    <Compile Include="Migrations\201805101631562_Qualification.Designer.cs">
+      <DependentUpon>201805101631562_Qualification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +66,11 @@
       <Project>{E3407FCB-EE2E-4955-8702-909843CA93FF}</Project>
       <Name>CollegeLolaGonzalezControl.Domain.Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201805101631562_Qualification.resx">
+      <DependentUpon>201805101631562_Qualification.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
