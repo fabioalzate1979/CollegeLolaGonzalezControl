@@ -9,13 +9,13 @@ namespace CollegeLolaGonzalezControl.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public ActionResult Index()
+        public ActionResult IngresoCalificacion()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult Index(string Data) {
+        public ActionResult IngresoCalificacion(string Data) {
 
             return View();
         }

@@ -1,0 +1,152 @@
+﻿
+@section Scripts{
+<script>
+    $("#select1").change(function () {
+        console.log("Entro al script")
+        if ($(this).data('options') == undefined) {
+            $(this).data('options', $('#select2 option').clone());
+        }
+        //console.log($(this).val());
+        var id = $(this).val();
+        var options = $(this).data('options').filter('[data-value=' + id + ']');
+        //console.log(options);
+        $('#selectiondiv').show();
+        //document.getElementById("selectiondiv").style.display = "block";
+        $('#select2').html(options).show();
+    });
+
+    $('#submitBtn').click(function () {
+        $('#lname').text($('#select1').val());
+        $('#fname').text($('#select2').val());
+    });
+
+    $('#submit').click(function () {
+        alert('submitting');
+        $('#formfield').submit();
+    });
+
+    $('#exampleModal').modal('show')
+    //$('#exampleModal').modal(options)
+</script>
+}
+
+
+
+
+<div class="container">
+    <h2>Ingreso Calificaciones</h2>
+    <form role="form" class="form-horizontal" method="post">
+
+        <div class="form-group">
+            <label class="col-sm-1" for="inputPassword1">Materia</label>
+            <div class="col-sm-5">
+                <select class="form-control" name="select1" id="select1">
+                    <option value="">Seleccione la Materia</option>
+                    <option value="1">Algebra y Trigonometria</option>
+                    <option value="2">Calculo Diferencial</option>
+                    <option value="3">Calculo Integral</option>
+                    <option value="4">Ecuaciones Diferencial</option>
+                    <option value="5">Metodos Numericos</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group" id="selectiondiv" style="display: none;">
+            <label class="col-sm-1" for="inputPassword1">Alumno</label>
+            <div class="col-sm-5">
+                <select class="form-control" name="select2" id="select2" style="display: none;">
+                    <option>---</option>
+                    <option data-value="1">Macnelly Torres</option>
+                    <option data-value="1">Franco Armani</option>
+                    <option data-value="1">Alexis Henriquez</option>
+                    <option data-value="1">Andres Guerra</option>
+                    <option data-value="2">Matheus Uribe</option>
+                    <option data-value="2">Diego Arias</option>
+                    <option data-value="2">Alexander Mejia</option>
+                    <option data-value="3">Farid Diaz</option>
+                    <option data-value="3">Wilson Borja</option>
+                    <option data-value="3">Marlos Moreno</option>
+                    <option data-value="4">Sebastian Perez</option>
+                    <option valdata-valueue="4">Andres Ibargue</option>
+                    <option data-value="4">Daniel Bocanegra</option>
+                    <option data-value="4">Davinson Sanchez</option>
+                    <option data-value="5">Felipe Aguilar</option>
+                    <option data-value="5">Victor Ibarbo</option>
+                </select>
+            </div>
+        </div>
+
+
+
+        <!--<div class="form-group">
+        <label class="col-sm-1" for="inputEmail1">Nombre</label>
+        <div class="col-sm-5"><input type="text" class="form-control" id="inputEmail1" placeholder="Ingrese Nombre"></div>
+    </div>-->
+
+        <div class="form-group">
+            <div class="col-sm-3"><label>Nota 1</label><input type="text" class="form-control" placeholder="Ingrese Nota"></div>
+            <div class="col-sm-3"><label>Nota 2</label><input type="text" class="form-control" placeholder="Ingrese Nota"></div>
+            <div class="col-sm-3"><label>Nota 3</label><input type="text" class="form-control" placeholder="Ingrese Nota"></div>
+            <div class="col-sm-3"><label>Nota 4</label><input type="text" class="form-control" placeholder="Ingrese Nota"></div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-6">
+                <button type="submit" class="btn btn-danger pull-right" value="Submit" id="submitBtn" data-toggle="modal" data-target="#exampleModalLong">Enviar</button>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+
+    
+    <!--<div class="modal fade" id="confirm-submit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Confirm Submit
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to submit the following details?
+                    <table class="table">
+                        <tr>
+                            <th>Last Name</th>
+                            <td id="lname"></td>
+                        </tr>
+                        <tr>
+                            <th>First Name</th>
+                            <td id="fname"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <a href="#" id="submit" class="btn btn-success success">Submit</a>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+</div>
+
+
+

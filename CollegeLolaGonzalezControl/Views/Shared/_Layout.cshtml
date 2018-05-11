@@ -1,42 +1,94 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
-</head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Prueba", "Index", "Qualification", new { area = "QualificationManager" }, new {/* OPCION OBLIGATORIA*/ })</li>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-                </ul>
-            </div>
-        </div>
+    <title>Material Pro Admin Template - The Most Complete & Trusted Bootstrap 4 Admin Template</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="/css/colors/blue.css" id="theme" rel="stylesheet">
+
+    <link href="/css/overrides.css" id="theme" rel="stylesheet">
+
+    @RenderSection("Head", false)
+
+</head>
+<body class="fix-header fix-sidebar card-no-border logo-center">
+    <div id="main-wrapper">
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <div class="navbar-header-left">
+                    <a class="navbar-brand text-light" href="index.html">
+                        <!-- Logo icon --><b>
+                            <i class="wi wi-day-sunny"></i>
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text -->
+                        <span>COLEGIO LOLA GONZALEZ</span>
+                    </a>
+                </div>
+                <div class="navbar-collapse">
+                    <ul class="nav navbar-nav ">
+                        <li class="nav-item dropdown">@Html.ActionLink("Home", "Index", "Home", new { @class = "text-light" })</li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item dropdown">@Html.ActionLink("About", "About", "Home", new { @class = "text-light" })</li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item dropdown">@Html.ActionLink("Contact", "Contact", "Home", new { @class = "text-light" })</li>
+                    </ul>
+
+                </div>
+
+                <div class="navbar-collapse collapse">
+
+                    <ul class="navbar-nav mr-auto mt-md-0">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
+                    </ul>
+
+                    <ul class="navbar-nav my-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ti-user"></i></a>
+                            <div class="dropdown-menu dropdown-menu-right scale-up">
+                                <ul class="dropdown-user">
+                                    <li>
+                                        <div class="dw-user-box">
+                                            <div class="u-text">
+                                                <h4>@User.Identity.Name</h4>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="/Security/Login"><i class="fa fa-power-off"></i> Logout</a></li>
+
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+        </header>
+
+
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-            <p>AGILECODE - Desarrollador Fabio Alzate</p>
-        </footer>
-    </div>
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+    @RenderBody()
+    <!--Custom JavaScript -->
+    <script src="~/js/jquery-3.3.1.js"></script>
+    <script src="/js/custom.min.js"></script>
+    @RenderSection("Scripts", false)
 </body>
+<footer class="footer">
+    © 2018 Material Pro Admin by wrappixel.com
+</footer>
+
+
 </html>
