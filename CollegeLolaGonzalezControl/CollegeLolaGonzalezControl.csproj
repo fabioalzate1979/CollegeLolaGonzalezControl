@@ -3991,6 +3991,7 @@
     <Content Include="Views\Security\IndexP.cshtml" />
     <Content Include="Views\Security\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\ResultadoCalificacion.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

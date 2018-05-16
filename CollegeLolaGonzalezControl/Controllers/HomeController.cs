@@ -17,7 +17,22 @@ namespace CollegeLolaGonzalezControl.Controllers
         [HttpPost]
         public ActionResult IngresoCalificacion(string Data) {
 
+            return View(Data);
+        }
+
+        // GET: Home
+        public ActionResult ResultadoCalificacion()
+        {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult ResultadoCalificacion(string Data)
+        {
+
+            return View(Data);
+        }
+
+
     }
 }
